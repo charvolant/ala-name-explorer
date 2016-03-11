@@ -1,0 +1,41 @@
+#name-query {
+    display: inline-block;
+    margin-left: 2em;
+    margin-right: 1em;
+    margin-top: 1ex;
+    padding: 1ex;
+    width: 45%;
+    float: left;
+}
+
+#name-query h1,h2,h3,h4 {
+    margin-top: 2ex;
+    margin-bottom: 0.5ex;
+}
+
+#name-query .form-submit {
+    margin-top: 2ex;
+}
+
+#name-result {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-top: 1ex;
+    padding: 1ex;
+    width: 45%;
+    float: right;
+}
+
+table.matched-name {
+    width: 100%;
+}
+
+table.matched-name td.property-label {
+    padding-left: 1ex;
+}
+
+table.matched-name td.property-value {
+    padding-left: 0.5ex;
+    padding-right: 1ex;
+}
