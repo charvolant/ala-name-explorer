@@ -11,6 +11,7 @@ class ExplorerController {
         LinnaeanRankClassification source = new LinnaeanRankClassification();
         MetricsResultDTO result = null
         String errors = "", issues = ""
+        def soundex;
 
         source.kingdom = StringUtils.trimToNull(params.kingdom)
         source.phylum = StringUtils.trimToNull(params.phylum)
@@ -26,7 +27,8 @@ class ExplorerController {
             result = explorerService.find(source)
             errors = result?.errors?.inject("", { acc, val -> acc + (acc.isEmpty() ? "" : ", ") + val.name()})
             issues = result.lastException?.message ?: ""
+            soundex = explorerService.soundex(source.scientificName)
         }
-        render(view: "/index", model: [source: source, result: result, matchErrors: errors, issues: issues])
+        render(view: "/index", model: [source: source, result: result, soundex: soundex, matchErrors: errors, issues: issues])
     }
 }

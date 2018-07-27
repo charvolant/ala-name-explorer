@@ -92,8 +92,8 @@
 				<td class="property-value"><exp:nameLink name="${cl?.order}" id="${cl?.oid}"/></td>
 			</tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td class="property-label"><g:message code="page.label.soundex"/></td>
+                <td class="property-value">${soundex.genus} ${soundex.species}</td>
                 <td class="property-label"><g:message code="page.label.family"/></td>
                 <td class="property-value"><exp:nameLink name="${cl?.family}" id="${cl?.fid}"/></td>
             </tr>
